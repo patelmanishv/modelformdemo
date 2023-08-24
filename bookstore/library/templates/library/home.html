@@ -1,0 +1,16 @@
+<!-- library/templates/library/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookstore Home</title>
+</head>
+<body>
+    <h1>Welcome to the Bookstore!</h1>
+    <ul>
+        {% for book in books %}
+            <li>{{ book.title }} by {{ book.author }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'book_add' %}">Add a Book</a>
+</body>
+</html>
